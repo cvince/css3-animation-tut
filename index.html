@@ -6,14 +6,99 @@
 <link rel="stylesheet" type="text/css" href="css/layout.css">
 <link href='http://fonts.googleapis.com/css?family=Cambo|Varela+Round' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src='js/zepto.min.js'></script>
+<script type="text/javascript" src='js/effects.js'></script>
 
 </head>
 
 <body>
-  <div class="container">
-    <div class="four columns"></div>
 
+<nav>
+  <ul>
+    <span>10 Minutes</span>
+    <li><a href="#why-css3">1m - Triggering</a></li>
+    <li><a href="">1m - Triggering</a></li>
+    <li><a href="">1m - Triggering</a></li>
+    <li><a href="">1m - Triggering</a></li>
+    <li><a href="">1m - Triggering</a></li>
+    <li><a href="">1m - Triggering</a></li>
+    <li><a href="">1m - Triggering</a></li>
+  </ul>
+</nav>
+
+  <section id="home">
+  <div class="container">
+    <div class="fifteen columns alpha">
+      <div class="home-intro ani vert-flyIn seq0">
+      <h1>cvince's CSS3 animation* primer</h1>
+      <h4>in under 10 minutes</h4>
+      <h5 class="pull-right">*No jQuery needed</h5>
+      </div>
+    </div>
   </div>
+  </section>
+
+  <section id="why-css3">
+
+  <div class="container">
+    <div class="sixteen columns alpha">
+      <h2>Why CSS3 Animations?</h2>
+      <hr>
+      <p>You may or may not be familiar with jQuery or canvas animation techniques. Those who use jQuery animations do so mainly for browser compatibility, and ease-of-use, but there is a better way to animating objects on screen.</p>
+
+      <p>jQuery and canvas utilize "path functions", where a pixel, or a DOM element is controlled pixel-by-pixel, while javascript draws its location at every point along its path.</p>
+
+      <p>CSS3 animations are triggered using step functions. This means that you have an initial state, and an end state, and the the browser engine determines in the best way to move objects from one state to another. Often --particularly in a desktop environment -- this means offloading the animation activity to your computer's video card, which is much better at moving stuff on screen than your CPU. This makes animations buttery smooth, and drastically lowers CPU usage on animated webpages</p>
+
+      <table style="max-width:300px; width: 100%;">
+        <thead>
+          <tr>
+            <td>Method</td>
+            <td>Ease</td>
+            <td>Compatibility</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>jQuery Anims.</td>
+            <td>Very Easy</td>
+            <td>Compatible</td>
+          </tr>
+          <tr>
+            <td>CSS3 Anims.</td>
+            <td>Easy</td>
+            <td>Screw IE9</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <section id="triggering">
+
+  <div class="container">
+    <div class="sixteen columns alpha">
+      <h2>How to trigger?</h2>
+      <hr>
+
+      <p>
+        Triggering animations is either done with pre-built interaction
+      </p>
+
+    </div>
+
+
+
+    <h3>Triggering without javascript</h3>
+    <p></p>
+
+    <h3>Triggering with javacsript</h3>
+    <div class="four columns">
+
+    </div>
+  </div>
+
+  </section>
 
 </body>
 
