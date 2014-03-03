@@ -8,7 +8,15 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, span {
+a {
+    color: #458dc9;
+}
+
+a:hover{
+    color: #666;
+}
+
+h1, h2, h3, h4, h5, h6, span {
     font-family: 'Varela Round', sans-serif;
     margin: 0;
 }
@@ -37,6 +45,11 @@ h5 {
     color:#ccc;
 }
 
+h6 {
+    font-size: 0.8em;
+    color:#999;
+}
+
 hr {
     border-top: 1px solid #000;
 }
@@ -58,6 +71,14 @@ table thead tr td{
     border-bottom: 1px solid #ccc;
 }
 
+span.code{
+    color:#666;
+    background:#dddbc7;
+}
+
+.clear{
+    clear: both;
+}
 
 .pull-right{
     float: right;
@@ -84,23 +105,97 @@ nav ul li{
 }
 
 nav ul li a{ color: #999; text-decoration: none;}
+
 nav ul li a:hover{ color:#458dc9; }
 
+
+/*animations*/
+
 .ani{
-    transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -webkit-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-duration: .3s;
-    -moz-transition-duration: .3s;
-    -webkit-transition-duration: .3s;
-    -o-transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
 }
 
-    .vert-flyIn.seq0{
-        translate: -100px;
+.ani.fast{
+    transition-duration: 0.5s;
+}
 
+.ani.slow{
+    transition-duration: 2s;
+}
+
+    .fadeIn.seq0{
+        opacity: 0;
     }
+
+    .fadeIn.seq1{
+        opacity: 1;
+    }
+
+    .vert-flyIn.seq0{
+        transform: translate(0,-100px);
+        opacity: 0;
+    }
+
+    .vert-flyIn.seq1{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+
+/*page elements*/
+
+textarea{
+    resize: none;
+    border: 0;
+    background: #fff;
+    color: #999;
+    display: block;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.anim-demo{
+    outline: 5px solid #eee;
+    padding: 1em;
+}
+
+.my-hover-box{
+    font-size: 2em;
+    text-align: center;
+    color:#d87373;
+    cursor: pointer;
+}
+
+.my-hover-box p{
+    margin: 0;
+}
+
+.my-hover-box p{
+    opacity: 0;
+    transform: translate(0, -100px);
+    transition-duration: 1s;
+}
+
+.my-hover-box:hover p{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.my-hover-box textarea.h0{
+    color:#000;
+    border-top: 3px solid #5ecc48;
+}
+
+.my-hover-box:hover textarea.h0{
+    color:#999;
+    border-top: 3px solid #fff;
+}
+
+.my-hover-box:hover textarea.h1{
+    color:#000;
+    border-top: 3px solid #5ecc48;
+}
 
 @media only screen and (max-width: 767px) {
     body{

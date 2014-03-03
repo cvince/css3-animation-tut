@@ -21,6 +21,8 @@
 /* #Base 960 Grid
 ================================================== */
 
+    .container .half.column                     { width: 50%; }
+
     .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
     .container .column,
     .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
@@ -69,6 +71,7 @@
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
 
+    .interior.column                            { margin: 0; }
 
 
 /* #Tablet (Portrait)

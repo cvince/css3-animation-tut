@@ -5,18 +5,16 @@
 <link rel="stylesheet" type="text/css" href="css/skeleton.css">
 <link rel="stylesheet" type="text/css" href="css/layout.css">
 <link href='http://fonts.googleapis.com/css?family=Cambo|Varela+Round' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src='js/zepto.min.js'></script>
-<script type="text/javascript" src='js/effects.js'></script>
 
 </head>
 
-<body>
+<body class="ani slow fadeIn seq0">
 
 <nav>
   <ul>
     <span>10 Minutes</span>
-    <li><a href="#why-css3">1m - Triggering</a></li>
-    <li><a href="">1m - Triggering</a></li>
+    <li><a href="#why-css3">Why use CSS3?</a></li>
+    <li><a href="#triggering">Triggering</a></li>
     <li><a href="">1m - Triggering</a></li>
     <li><a href="">1m - Triggering</a></li>
     <li><a href="">1m - Triggering</a></li>
@@ -37,9 +35,9 @@
   </div>
   </section>
 
-  <section id="why-css3">
+  <section >
 
-  <div class="container">
+  <div id="why-css3" class="container">
     <div class="sixteen columns alpha">
       <h2>Why CSS3 Animations?</h2>
       <hr>
@@ -49,12 +47,13 @@
 
       <p>CSS3 animations are triggered using step functions. This means that you have an initial state, and an end state, and the the browser engine determines in the best way to move objects from one state to another. Often --particularly in a desktop environment -- this means offloading the animation activity to your computer's video card, which is much better at moving stuff on screen than your CPU. This makes animations buttery smooth, and drastically lowers CPU usage on animated webpages</p>
 
-      <table style="max-width:300px; width: 100%;">
+      <table style="max-width:500px; width: 100%;">
         <thead>
           <tr>
             <td>Method</td>
-            <td>Ease</td>
+            <td>Difficulty</td>
             <td>Compatibility</td>
+            <td>Awesomeness</td>
           </tr>
         </thead>
         <tbody>
@@ -62,17 +61,21 @@
             <td>jQuery Anims.</td>
             <td>Very Easy</td>
             <td>Compatible</td>
+            <td>Pree cool</td>
           </tr>
           <tr>
             <td>CSS3 Anims.</td>
             <td>Easy</td>
-            <td>Screw IE9</td>
+            <td>Screw IE9 (IE10+)</td>
+            <td>Pure Awesomesauce</td>
           </tr>
         </tbody>
       </table>
 
     </div>
   </div>
+
+  </section>
 
   <section id="triggering">
 
@@ -82,23 +85,84 @@
       <hr>
 
       <p>
-        Triggering animations is either done with pre-built interaction
+        Triggering animations is either done with pre-built interactive DOM state-change methods such as :hover, radio, and inheritence states, or using javascript to switch on and off state classes.
       </p>
-
-    </div>
-
-
-
-    <h3>Triggering without javascript</h3>
-    <p></p>
-
-    <h3>Triggering with javacsript</h3>
-    <div class="four columns">
 
     </div>
   </div>
 
+  <div class="container">
+    <div class="eight columns alpha">
+    <h3>Triggering without javascript</h3>
+      <p>
+        The css :hover state has been around for a long time. It controls what happens when you mouse over a specified DOM element wihin the page. On the right is an example of base state and :hover state css, and animation properties which dictate the movement between the base state and hover state.
+      </p>
+      <p>
+        Looking at the css on the right, there are two types of properties to observe. <span class="code">transition-duration: 1s;</span> and the <span class="code">transform: translate(0, -100px); and opacity: 0;</span> properties. In the hover state, you will notice that the <span class="code"> transform and opacity </span> properties are different --these are animateable properties controlled by the animation property <span class="code">transition-duration</span>.
+      </p>
+      <p>
+        In this article, I will only cover how to use the :hover state for firing css3 animations without javascript. For more information on other native state triggers, <a href="https://github.com/dapinitial">David Puerto</a> is an expert.
+      </p>
+      <p>
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
+
+      </p>
+    </div>
+
+    <div class="eight columns omega">
+
+        <div class="half column interior">
+        <h6>html</h6>
+        <textarea style="width: 100%; height: 100px;">
+<div class="my-hover-box">
+  ->Hover me to show stuff.
+  <p>This enters on hover</p>
+</div>
+        </textarea>
+        </div>
+
+        <div class="clear"></div>
+
+      <div id="hover-demo" class="anim-demo">
+        <div class="my-hover-box">
+          ->Hover me to show stuff.
+          <p>This enters on hover</p>
+
+
+        <div class="half column interior">
+        <h6>css</h6>
+        <textarea class="h0" style="width: 100%; height: 100px;">
+.my-hover-box p{
+    opacity: 0;
+    transform: translate(0, -100px);
+    transition-duration: 1s;
+}
+    </textarea>
+        </div>
+
+        <div class="half column interior">
+        <h6>css (hover)</h6>
+        <textarea class="h1" style="width: 100%; height: 100px;">
+.my-hover-box:hover p{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+        </textarea>
+        </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+      </div>
+    </div>
+  </div>
+
   </section>
+
+<script type="text/javascript" src='js/zepto.min.js'></script>
+<script type="text/javascript" src='js/effects.js'></script>
+<script type="text/javascript" src='js/prefixfree.min.js'></script>
 
 </body>
 
